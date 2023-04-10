@@ -13,40 +13,39 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
     <title>Product preview card component</title>
   </head>
-  <body>
-    <div class="main-card">
-      <div class="no-gutters">
-        <img
-          src="images/image-product-desktop.jpg"
-          class="card-img"
-          alt="perfume"
-        />
 
-        <div class="col-md-8">
-          <div class="card-body">
-            <h2 class="card-title">Gabrielle Essence Eu De Parfum</h2>
-            <p class="card-text">
-              Preview Gabrielle Essence Eau De Parfum A floral, solar and
-              voluptuous interpretation composed by Olivier Polge,
-              Perfumer-Creator for the House of CHANEL. $149.99 $169.99 Add to
-              Cart
+  <body>
+    <div>
+      <div class="container">
+        <div class="grid">
+          <div class="img">
+            <img src="images/image-product-desktop.jpg" alt="Perfume" />
+          </div>
+          <div class="card-content">
+            <h6 class="product-category">Perfume</h6>
+            <h2 class="product-name">Gabrielle Essence Eau De Parfum</h2>
+            <p class="description">
+              A floral, solar, and voluptuous interpretation by Oliver Polge,
+              Perfumer-Creator for the House of CHANEL.
             </p>
-            <p class="card-price">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
+            <div class="price">
+              <p class="current-price">$149.99</p>
+              <p class="old-price">$169.99</p>
+            </div>
+            <button class="cart">
+              <img src="images/icon-cart.svg" alt="item cart" />Add to Cart
+            </button>
           </div>
         </div>
       </div>
     </div>
-
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Fabian</a>.
     </div>
   </body>
 </html>
