@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&family=Outfit:wght@900&display=swap");
 
-/* font-family: 'Fraunces', serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Outfit', sans-serif; */
-
 /* removes browser default padding/margin */
 * {
   margin: 0;
@@ -15,6 +11,10 @@ body {
   background-color: hsl(30, 38%, 92%);
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* this + align-items = centered in middle*/
+  align-items: center;
 }
 .container {
   margin: 30px auto;
@@ -27,15 +27,71 @@ body {
   background-color: hsl(0, 0%, 100%);
   max-width: 700px;
   grid-template-columns: 1fr 1fr; /*divides into column fractions*/
+  overflow: hidden;
 }
 .img img {
   max-width: 100%;
+  display: inherit; /* removes white border space around image*/
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+.card-content {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /*creates gaps between content*/
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+.product-category {
+  letter-spacing: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+.product-name {
+  font-family: "Fraunces", serif;
+  font-size: 34px;
+  color: hsl(212, 21%, 14%);
+}
+
+.description {
+  color: hsl(228, 12%, 48%);
+  line-height: 1.5em;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.current-price {
+  font-family: "Fraunces", serif;
+  font-size: 30px;
+  padding-right: 25px;
+  color: hsl(158, 36%, 37%);
+}
+.old-price {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+
+.cart {
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 618px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .img img {
+    max-height: 290px;
+    width: 100%;
+    object-fit: cover;
+  }
 }
